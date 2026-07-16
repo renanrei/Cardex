@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>CarDex</title>
 
 <style>
+
 *{
 margin:0;
 padding:0;
@@ -14,89 +19,157 @@ font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-background:#111;
+
+background:#000;
+
 color:white;
+
+overflow-x:hidden;
+
 }
 
 header{
-background:#000;
-padding:20px;
-text-align:center;
-border-bottom:3px solid #e60000;
+
+position:fixed;
+
+top:0;
+
+width:100%;
+
+padding:20px 60px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(0,0,0,.75);
+
+backdrop-filter:blur(10px);
+
+z-index:999;
+
 }
 
-header h1{
-font-size:42px;
-color:#ff2d2d;
+.logo{
+
+font-size:38px;
+
+font-weight:bold;
+
+color:#ff3b30;
+
+letter-spacing:2px;
+
 }
 
-header p{
-margin-top:10px;
-color:#ccc;
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+margin-left:30px;
+
+font-size:18px;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#ff3b30;
+
 }
 
 .hero{
-padding:60px 20px;
-text-align:center;
+
+height:100vh;
+
+background:
+
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.75)),
+
+url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80");
+
+background-size:cover;
+
+background-position:center;
+
+display:flex;
+
+align-items:center;
+
+padding-left:8%;
+
 }
 
-.hero h2{
-font-size:38px;
-margin-bottom:15px;
+.hero-text{
+
+max-width:650px;
+
+}
+
+.hero h1{
+
+font-size:70px;
+
+color:#ffffff;
+
+}
+
+.hero span{
+
+color:#ff3b30;
+
 }
 
 .hero p{
-font-size:18px;
-color:#bbb;
-margin-bottom:30px;
+
+margin-top:20px;
+
+font-size:22px;
+
+color:#dddddd;
+
+line-height:35px;
+
 }
 
 .botao{
+
 display:inline-block;
-background:#ff2d2d;
-color:white;
-padding:15px 35px;
-border-radius:30px;
+
+margin-top:40px;
+
+padding:18px 45px;
+
+background:#ff3b30;
+
+border-radius:50px;
+
 text-decoration:none;
+
+color:white;
+
 font-weight:bold;
-}
 
-.categorias{
-padding:40px 20px;
-text-align:center;
-}
+font-size:20px;
 
-.categorias h2{
-margin-bottom:25px;
-}
-
-.cards{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
-}
-
-.card{
-background:#1d1d1d;
-padding:20px;
-border-radius:15px;
-width:180px;
 transition:.3s;
+
 }
 
-.card:hover{
+.botao:hover{
+
+background:#ff5f55;
+
 transform:scale(1.05);
-background:#292929;
+
 }
 
-footer{
-margin-top:50px;
-padding:20px;
-text-align:center;
-background:#000;
-color:#888;
-}
 </style>
 
 </head>
@@ -104,42 +177,47 @@ color:#888;
 <body>
 
 <header>
-<h1>🚗 CarDex</h1>
-<p>O catálogo definitivo para apaixonados por carros.</p>
+
+<div class="logo">CARDEX</div>
+
+<nav>
+
+<a href="#">Início</a>
+
+<a href="#">JDM</a>
+
+<a href="#">Supercarros</a>
+
+<a href="#">Clássicos</a>
+
+<a href="#">Luxo</a>
+
+</nav>
+
 </header>
 
 <section class="hero">
-<h2>Encontre o carro dos seus sonhos</h2>
-<p>Dos clássicos aos superesportivos, dos luxuosos aos modificados.</p>
 
-<a class="botao" href="#">Explorar Carros</a>
-</section>
+<div class="hero-text">
 
-<section class="categorias">
+<h1>O universo dos <span>apaixonados por carros</span></h1>
 
-<h2>Categorias</h2>
+<p>
 
-<div class="cards">
+Dos clássicos aos hipercarros.
 
-<div class="card">🏛️<br><br>Clássicos</div>
+Dos originais aos modificados.
 
-<div class="card">💎<br><br>Luxo</div>
+Descubra máquinas lendárias como Supra MK4, Skyline GT-R R34, RX-7, Lancer Evolution e muito mais.
 
-<div class="card">🏎️<br><br>Superesportivos</div>
+</p>
 
-<div class="card">🔧<br><br>Modificados</div>
-
-<div class="card">🇯🇵<br><br>JDM</div>
-
-<div class="card">🇺🇸<br><br>Muscle Cars</div>
+<a href="#" class="botao">Explorar Carros</a>
 
 </div>
 
 </section>
 
-<footer>
-© 2026 CarDex - Todos os direitos reservados.
-</footer>
-
 </body>
+
 </html>
