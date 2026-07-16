@@ -3,113 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARDEX</title>
+    <title>Login CARDEX</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
         body {
-            min-height: 100vh;
-            position: relative;
-            color: #fff;
-        }
-        /* Fundo EXATO que pediu: Brian + Supra MK4 / Toretto + Charger RT */
-        .fundo-cena {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('https://i.imgur.com/9XzGLwY.jpg') center/cover no-repeat fixed;
-            z-index: 0;
-        }
-        .area-total {
-            position: relative;
-            z-index: 1;
-            padding: 24px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .cabecalho {
+            width: 100vw;
+            height: 100vh;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            margin-bottom: 80px;
+            justify-content: center;
+            /* Fundo exato: Brian + Supra MK4 / Toretto + Charger RT */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://i.imgur.com/9XzGLwY.jpg') center/cover no-repeat fixed;
         }
-        .logo {
-            font-size: 56px;
-            font-weight: 900;
-            color: #ff6b00;
-            letter-spacing: 1px;
+        .icone-usuario {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 40px;
+            position: relative;
         }
-        .menu a {
-            color: #fff;
+        .circulo-externo {
+            width: 100%;
+            height: 100%;
+            border: 3px solid #4ade80;
+            border-radius: 50%;
+            opacity: 0.7;
+        }
+        .icone-figura {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 50px;
+            border-radius: 50px 50px 0 0;
+            background: linear-gradient(#4ade80, #3b82f6);
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
+        }
+        input {
+            width: 280px;
+            padding: 12px 15px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .btn-entrar {
+            width: 280px;
+            padding: 12px;
+            background: #003399;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .link-conta {
+            color: white;
+            font-size: 14px;
             text-decoration: none;
-            font-size: 20px;
-            margin-left: 28px;
-            font-weight: 500;
-        }
-        .caixa-login {
-            background: rgba(0,0,0,0.85);
-            padding: 32px;
-            border-radius: 12px;
-            width: 350px;
-            margin-left: auto;
-        }
-        .caixa-login h2 {
-            text-align: center;
-            margin-bottom: 22px;
-            color: #ff6b00;
-            font-size: 28px;
-        }
-        .caixa-login input {
-            width: 100%;
-            padding: 14px;
-            margin-bottom: 16px;
-            border: none;
-            border-radius: 8px;
-            font-size: 18px;
-        }
-        .btn-principal {
-            width: 100%;
-            padding: 14px;
-            background: #ff6b00;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 14px;
-            cursor: pointer;
-        }
-        .btn-secundario {
-            width: 100%;
-            padding: 14px;
-            background: #222;
-            color: #fff;
-            border: 1px solid #444;
-            border-radius: 8px;
-            font-size: 20px;
-            font-weight: bold;
-            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="fundo-cena"></div>
-    <div class="area-total">
-        <div class="cabecalho">
-            <div class="logo">CARDEX</div>
-            <div class="menu">
-                <a href="#">Início</a>
-                <a href="#">Garagem</a>
-                <a href="#">Coleção</a>
-                <a href="#">Contato</a>
-            </div>
-        </div>
-
-        <div class="caixa-login">
-            <h2>Entrar</h2>
-            <input type="email" placeholder="Seu e-mail">
-            <input type="password" placeholder="Sua senha">
-            <button class="btn-principal">Entrar</button>
-            <button class="btn-secundario">Criar Conta</button>
-        </div>
+    <div class="icone-usuario">
+        <div class="circulo-externo"></div>
+        <div class="icone-figura"></div>
     </div>
+
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Senha">
+    <button class="btn-entrar">Entrar</button>
+    <a href="#" class="link-conta">Ainda não possuí uma conta</a>
 </body>
 </html>
