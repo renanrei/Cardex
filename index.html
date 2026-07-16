@@ -1,86 +1,122 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login CARDEX</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: sans-serif;
-        }
-        body {
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            /* Fundo exato: Brian + Supra MK4 / Toretto + Charger RT */
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), url('https://i.imgur.com/9XzGLwY.jpg') center/cover no-repeat fixed;
-        }
-        .icone-usuario {
-            width: 120px;
-            height: 120px;
-            margin-bottom: 40px;
-            position: relative;
-        }
-        .circulo-externo {
-            width: 100%;
-            height: 100%;
-            border: 3px solid #4ade80;
-            border-radius: 50%;
-            opacity: 0.7;
-        }
-        .icone-figura {
-            position: absolute;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 70px;
-            height: 50px;
-            border-radius: 50px 50px 0 0;
-            background: linear-gradient(#4ade80, #3b82f6);
-            clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%);
-        }
-        input {
-            width: 280px;
-            padding: 12px 15px;
-            margin-bottom: 15px;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-        }
-        .btn-entrar {
-            width: 280px;
-            padding: 12px;
-            background: #003399;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            cursor: pointer;
-        }
-        .link-conta {
-            color: white;
-            font-size: 14px;
-            text-decoration: none;
-        }
-    </style>
-</head>
-<body>
-    <div class="icone-usuario">
-        <div class="circulo-externo"></div>
-        <div class="icone-figura"></div>
-    </div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CARDEX Login</title>
 
-    <input type="email" placeholder="Email">
-    <input type="password" placeholder="Senha">
-    <button class="btn-entrar">Entrar</button>
-    <a href="#" class="link-conta">Ainda não possuí uma conta</a>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    /* Troque SUA_IMAGEM.jpg pela foto do Supra MK4 que você escolher */
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+    url("SUA_IMAGEM.jpg") center center/cover no-repeat fixed;
+}
+
+.logo{
+    font-size:64px;
+    font-weight:900;
+    color:#00e5ff;
+    letter-spacing:6px;
+    text-shadow:
+        0 0 8px #00e5ff,
+        0 0 18px #00e5ff,
+        0 0 35px #008cff,
+        0 0 50px #008cff;
+    margin-bottom:40px;
+}
+
+.icone-usuario{
+    width:120px;
+    height:120px;
+    margin-bottom:35px;
+    position:relative;
+}
+
+.circulo-externo{
+    width:100%;
+    height:100%;
+    border:3px solid #00e5ff;
+    border-radius:50%;
+}
+
+.icone-figura{
+    position:absolute;
+    top:20px;
+    left:50%;
+    transform:translateX(-50%);
+    width:70px;
+    height:50px;
+    border-radius:50px 50px 0 0;
+    background:linear-gradient(#00e5ff,#0066ff);
+    clip-path:polygon(0 0,100% 0,85% 100%,15% 100%);
+}
+
+input{
+    width:300px;
+    padding:14px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    background:rgba(255,255,255,.92);
+}
+
+.btn-entrar{
+    width:300px;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    background:#0066ff;
+    color:#fff;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.btn-entrar:hover{
+    background:#0099ff;
+}
+
+.link-conta{
+    color:#fff;
+    text-decoration:none;
+    margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="logo">CARDEX</h1>
+
+<div class="icone-usuario">
+    <div class="circulo-externo"></div>
+    <div class="icone-figura"></div>
+</div>
+
+<input type="email" placeholder="Email">
+
+<input type="password" placeholder="Senha">
+
+<button class="btn-entrar">Entrar</button>
+
+<a href="#" class="link-conta">Ainda não possuo uma conta</a>
+
 </body>
 </html>
