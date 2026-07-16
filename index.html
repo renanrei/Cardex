@@ -3,30 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CARDEX - Velozes e Furiosos</title>
+    <title>CARDEX</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
         body {
-            background: #000;
-            color: #fff;
             min-height: 100vh;
             position: relative;
+            color: #fff;
         }
-        /* Fundo com a cena dos personagens */
-        .fundo {
+        /* Fundo EXATO que pediu: Brian + Supra MK4 / Toretto + Charger RT */
+        .fundo-cena {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('https://i.imgur.com/5Z7XQZL.jpg') center/cover no-repeat;
+            inset: 0;
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.75)), url('https://i.imgur.com/9XzGLwY.jpg') center/cover no-repeat fixed;
             z-index: 0;
         }
-        .conteudo {
+        .area-total {
             position: relative;
             z-index: 1;
-            padding: 25px;
-            max-width: 1000px;
+            padding: 24px;
+            max-width: 1200px;
             margin: 0 auto;
         }
         .cabecalho {
@@ -36,85 +32,67 @@
             margin-bottom: 80px;
         }
         .logo {
-            font-size: 52px;
+            font-size: 56px;
             font-weight: 900;
             color: #ff6b00;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
         .menu a {
             color: #fff;
             text-decoration: none;
-            font-size: 19px;
-            margin-left: 25px;
+            font-size: 20px;
+            margin-left: 28px;
             font-weight: 500;
-        }
-        .meio {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 40px;
-        }
-        .texto {
-            flex: 1;
-            min-width: 300px;
-        }
-        .texto h1 {
-            font-size: 72px;
-            line-height: 1;
-            margin-bottom: 25px;
-        }
-        .texto p {
-            font-size: 22px;
-            line-height: 1.5;
-            color: #ddd;
         }
         .caixa-login {
             background: rgba(0,0,0,0.85);
-            padding: 30px;
-            border-radius: 10px;
-            width: 340px;
+            padding: 32px;
+            border-radius: 12px;
+            width: 350px;
+            margin-left: auto;
         }
         .caixa-login h2 {
             text-align: center;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
             color: #ff6b00;
+            font-size: 28px;
         }
-        input {
+        .caixa-login input {
             width: 100%;
-            padding: 13px;
-            margin-bottom: 15px;
+            padding: 14px;
+            margin-bottom: 16px;
             border: none;
-            border-radius: 6px;
-            font-size: 17px;
+            border-radius: 8px;
+            font-size: 18px;
         }
-        .btn-laranja {
+        .btn-principal {
             width: 100%;
-            padding: 13px;
+            padding: 14px;
             background: #ff6b00;
-            color: white;
+            color: #fff;
             border: none;
-            border-radius: 6px;
-            font-size: 19px;
+            border-radius: 8px;
+            font-size: 20px;
             font-weight: bold;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
             cursor: pointer;
         }
-        .btn-preto {
+        .btn-secundario {
             width: 100%;
-            padding: 13px;
+            padding: 14px;
             background: #222;
-            color: white;
+            color: #fff;
             border: 1px solid #444;
-            border-radius: 6px;
-            font-size: 19px;
+            border-radius: 8px;
+            font-size: 20px;
             font-weight: bold;
             cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="fundo"></div>
-    <div class="conteudo">
+    <div class="fundo-cena"></div>
+    <div class="area-total">
         <div class="cabecalho">
             <div class="logo">CARDEX</div>
             <div class="menu">
@@ -125,24 +103,12 @@
             </div>
         </div>
 
-        <div class="meio">
-            <div class="texto">
-                <h1>Velozes<br>e Furiosos</h1>
-                <p>
-                    A família não acaba nunca.<br>
-                    Colecione os carros lendários do filme:<br>
-                    o Supra MK4 do Brian e o Charger RT do Toretto,<br>
-                    e todos os outros ícones da velocidade.
-                </p>
-            </div>
-
-            <div class="caixa-login">
-                <h2>Entrar</h2>
-                <input type="email" placeholder="Seu e-mail">
-                <input type="password" placeholder="Sua senha">
-                <button class="btn-laranja">Entrar</button>
-                <button class="btn-preto">Criar Conta</button>
-            </div>
+        <div class="caixa-login">
+            <h2>Entrar</h2>
+            <input type="email" placeholder="Seu e-mail">
+            <input type="password" placeholder="Sua senha">
+            <button class="btn-principal">Entrar</button>
+            <button class="btn-secundario">Criar Conta</button>
         </div>
     </div>
 </body>
